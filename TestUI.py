@@ -66,7 +66,6 @@ def run_convert(
         if vc_upload is None:
             return "You need to upload an audio", None
         sampling_rate, audio = vc_upload
-        duration = audio.shape[0] / sampling_rate
         audio = (audio / np.iinfo(audio.dtype).max).astype(np.float32)
         if len(audio.shape) > 1:
             audio = librosa.to_mono(audio.transpose(1, 0))
@@ -166,7 +165,7 @@ if __name__ == '__main__':
         rms_mix_rate = gr.Slider(minimum=0, maximum=1, value=1, label="Volume Envelope(rms_mix_rate)", interactive=True)
         protect = gr.Slider(minimum=0, maximum=0.5, value=0.5, label="Voice Protection(protect)", interactive=True)
         Convertbtn = gr.Button("Convert",variant="primary")
-        vc_log = gr.Textbox(label="Output Information", visible=False, interactive=False)
+        vc_log = gr.Textbox(label="Output Information", visible=True, interactive=False)
         vc_output = gr.Audio(label="Output Audio", interactive=False)
         Convertbtn.click(fn=run_convert,
                          inputs=[vc_upload, f0_up_key, f0_method, index_rate, filter_radius, resample_sr, rms_mix_rate,
