@@ -1,0 +1,5 @@
+Upload audio file,Transpose(f0_up_key),Pitch extraction algorithm(f0_method),Retrieval feature ratio(index_rate),Apply Median Filtering(filter_radius),Resampling(resample_sr),Volume Envelope(rms_mix_rate),Voice Protection(protect),output,flag,username,timestamp
+,,,0,0,0,0,0,,,,2024-04-13 21:05:13.354563
+,,,0,0,0,0,0,,,,2024-04-13 21:05:19.172229
+,,,0,0,0,0,0,,,,2024-04-13 21:05:42.644117
+,,,0,0,0,0,0,,,,2024-04-13 21:06:14.782896
